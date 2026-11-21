@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohammad Imamul Hossain</title>
+<meta name="description" content="Mohammad Imamul Hossain: power electronics engineer and PhD candidate at Deakin University, Melbourne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231a1b1d'/%3E%3Ctext x='32' y='41' font-family='Arial' font-weight='700' font-size='24' fill='%23ececec' text-anchor='middle' letter-spacing='2'%3EMH%3C/text%3E%3C/svg%3E">
+<style>
+/* VOICE: quiet, elegant, confident; a studio portfolio, not a resume dump.
+   IDEA: a dark gallery wall: framed panels lit from above, each section a numbered plate.
+   PICTURE: a huge spaced name in the first screen, and a monochrome line drawing of his converter research.
+   COLOUR and TYPE: charcoal and soft white only, grey for quiet text; Josefin Sans display with wide tracking, Lato light body.
+   LAYOUT: fixed side rail with stacked monogram and social links, nav top right, full-height numbered sections, two-column contact. */
+:root{color-scheme:dark;--bg:#151618;--panel:#1d1e21;--panel2:#25262a;--ink:#ececec;--soft:#9a9ba0;--dim:#5f6066;--line:#ffffff1a}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.75 Lato,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+h1,h2,h3,.disp{font-family:"Josefin Sans",system-ui,sans-serif;margin:0;text-wrap:balance}
+.lbl{font:600 11px "Josefin Sans",sans-serif;letter-spacing:.32em;text-transform:uppercase;color:var(--soft)}
+/* rail */
+.rail{position:fixed;inset:0 auto 0 0;width:84px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:30px 0;z-index:30;border-right:1px solid var(--line);background:#151618e6;backdrop-filter:blur(8px)}
+.mono{font:700 15px/1.05 "Josefin Sans",sans-serif;letter-spacing:.18em;text-align:center;text-decoration:none;color:var(--ink)}
+.social{display:flex;flex-direction:column;gap:18px;align-items:center}
+.social a{display:grid;place-items:center;width:40px;height:40px;color:var(--soft);transition:color .2s}
+.social a:hover,.social a:focus-visible{color:#fff}
+.social svg{width:16px;height:16px;fill:currentColor}
+.vert{writing-mode:vertical-rl;transform:rotate(180deg);font:600 10px "Josefin Sans",sans-serif;letter-spacing:.4em;text-transform:uppercase;color:var(--dim)}
+/* nav */
+nav{position:fixed;top:0;right:0;left:84px;z-index:25;display:flex;justify-content:flex-end;gap:6px;padding:24px max(4vw,20px);pointer-events:none}
+nav a{pointer-events:auto;font:600 11px "Josefin Sans",sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--soft);text-decoration:none;padding:12px 10px;transition:color .2s}
+nav a:hover,nav a:focus-visible,nav a.on{color:#fff}
+main{margin-left:84px}
+/* sections */
+.sec{position:relative;min-height:100vh;padding:clamp(90px,11vh,130px) max(6vw,24px) clamp(70px,9vh,100px);display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--line);background:radial-gradient(900px 520px at 50% 0%,#24252a,transparent 70%)}
+.sec .num{position:absolute;left:max(6vw,24px);bottom:28px;font:400 13px "Josefin Sans",sans-serif;letter-spacing:.2em;color:var(--dim)}
+.wrap{max-width:1160px;margin:0 auto;width:100%}
+.h2{font-size:clamp(30px,4.4vw,52px);font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1.08}
+.h2+.lbl{display:block;margin-top:16px}
+.head{text-align:center;margin-bottom:clamp(40px,6vw,70px)}
+.head p{color:var(--soft);max-width:58ch;margin:18px auto 0;font-size:16px}
+/* hero */
+.hero{text-align:center;background:radial-gradient(1000px 640px at 50% 35%,#2a2b30,var(--bg) 72%)}
+.hero .pre{display:block;margin-bottom:22px}
+.hero h1{font-size:clamp(46px,10.5vw,150px);font-weight:700;letter-spacing:.08em;line-height:.95;text-transform:uppercase;text-shadow:0 20px 50px #000a}
+.hero h1 small{display:block;font-size:.26em;font-weight:300;letter-spacing:.55em;margin-bottom:.4em;color:#d8d8d8}
+.hero .sub{display:inline-block;text-align:left;margin:30px 0 0 clamp(0px,22vw,330px);font:400 12px/2 "Josefin Sans",sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--soft)}
+.cta{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 30px;border:1px solid #ffffff40;font:600 11px "Josefin Sans",sans-serif;letter-spacing:.32em;text-transform:uppercase;text-decoration:none;color:var(--ink);background:transparent;cursor:pointer;transition:background .25s,color .25s}
+.cta:hover,.cta:focus-visible{background:var(--ink);color:var(--bg)}
+.hero .cta{margin-top:46px}
+.scroll{position:absolute;right:max(4vw,20px);bottom:40px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.scroll i{display:block;width:1px;height:60px;background:linear-gradient(var(--soft),transparent);animation:drop 2.2s ease-in-out infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(36px,6vw,90px);align-items:start}
+.about p{margin:0 0 18px;color:#cfcfd2}
+.about .h2{margin-bottom:30px}
+.facts div{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.facts div:first-child{border-top:1px solid var(--line)}
+.facts span{font:600 11px "Josefin Sans",sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);padding-top:4px}
+.facts b{font-weight:400;text-align:right;color:#e2e2e4}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(50px,7vw,80px);border-top:1px solid var(--line)}
+.stats div{padding:26px 10px 0;text-align:center}
+.stats div+div{border-left:1px solid var(--line)}
+.stats b{display:block;font:300 clamp(34px,4vw,50px)/1 "Josefin Sans",sans-serif;letter-spacing:.06em}
+.stats small{display:block;margin-top:12px}
+/* experience */
+.jobs{border-top:1px solid var(--line)}
+.job{display:grid;grid-template-columns:200px minmax(0,1fr);gap:30px;padding:30px 0;border-bottom:1px solid var(--line)}
+.job .when{font:400 13px "Josefin Sans",sans-serif;letter-spacing:.16em;color:var(--soft);white-space:nowrap;padding-top:4px}
+.job h3{font-size:20px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.job .org{color:var(--soft);font-size:15px;margin:4px 0 10px}
+.job ul{margin:0;padding-left:18px;color:#c9c9cc;font-size:16px}.job li{margin:3px 0}
+/* research showcase */
+.show{position:relative;height:clamp(300px,36vw,420px);margin:0 auto clamp(30px,4vw,50px);max-width:900px}
+.frame{position:absolute;top:50%;left:50%;background:linear-gradient(160deg,#2c2d32,#1a1b1e);border:1px solid #ffffff14;box-shadow:0 40px 70px #000c;padding:22px;display:flex;flex-direction:column;justify-content:space-between}
+.frame.a{width:30%;height:66%;transform:translate(-150%,-48%);opacity:.75}
+.frame.b{width:44%;height:84%;transform:translate(-50%,-56%);z-index:2}
+.frame.c{width:30%;height:66%;transform:translate(50%,-48%);opacity:.75}
+.frame .lbl{font-size:9px}
+.frame p{margin:0;font:400 clamp(12px,1.3vw,15px)/1.4 "Josefin Sans",sans-serif;letter-spacing:.04em;color:#e6e6e8}
+.frame svg{width:100%;height:auto;flex:1;min-height:0}
+.show .big{position:absolute;left:0;right:0;bottom:-6px;z-index:3;text-align:center;font-size:clamp(34px,6.5vw,76px);font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-shadow:0 10px 40px #000}
+.pubs{border-top:1px solid var(--line)}
+.pub{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:24px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--line)}
+.pub .yr{font:300 22px "Josefin Sans",sans-serif;color:var(--soft)}
+.pub h3{font:400 18px/1.45 Lato,sans-serif;color:#ececec;text-wrap:pretty}
+.pub p{margin:6px 0 0;font-size:14.5px;color:var(--soft)}
+.pub .kind{display:block;margin-bottom:6px;font-size:10px}
+.pub a{font:600 10px "Josefin Sans",sans-serif;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;color:var(--soft);white-space:nowrap;border-bottom:1px solid var(--dim);padding:8px 0 4px}
+.pub a:hover{color:#fff;border-color:#fff}
+.talks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px}
+.talk{background:var(--bg);padding:26px 24px}
+.talk h3{font-size:16px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.talk p{margin:8px 0 0;color:var(--soft);font-size:14.5px;line-height:1.55}
+/* projects */
+.filters{display:flex;justify-content:center;gap:4px;flex-wrap:wrap;margin-bottom:44px}
+.filters button{font:600 11px "Josefin Sans",sans-serif;letter-spacing:.28em;text-transform:uppercase;min-height:44px;padding:0 16px;background:none;border:0;border-bottom:1px solid transparent;color:var(--dim);cursor:pointer}
+.filters button[aria-pressed=true]{color:#fff;border-color:#fff}
+.filters button:hover{color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:22px}
+.proj{position:relative;background:linear-gradient(165deg,var(--panel2),var(--panel));border:1px solid #ffffff10;padding:30px 28px 26px;box-shadow:0 24px 40px #0007;transition:transform .35s,box-shadow .35s;display:flex;flex-direction:column;gap:12px}
+.proj:hover{transform:translateY(-6px);box-shadow:0 34px 60px #000b}
+.proj .n{font:300 13px "Josefin Sans",sans-serif;letter-spacing:.2em;color:var(--dim)}
+.proj h3{font-size:18px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;line-height:1.35}
+.proj p{margin:0;color:var(--soft);font-size:15.5px;line-height:1.65;flex:1}
+.proj .tags{font:400 11px "Josefin Sans",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#bdbdc1;border-top:1px solid var(--line);padding-top:14px}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.sk{background:var(--bg);padding:30px 28px}
+.sk h3{font-size:14px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;margin-bottom:14px}
+.sk p{margin:0;color:var(--soft);font-size:15.5px;line-height:1.9}
+.certs{margin-top:60px;display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:30px}
+.certs ul{margin:0;padding:0;list-style:none;columns:2 280px;column-gap:40px}
+.certs li{padding:10px 0;border-bottom:1px solid var(--line);break-inside:avoid;color:#cfcfd2;font-size:15.5px}
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:linear-gradient(165deg,var(--panel2),var(--panel));border:1px solid #ffffff10;box-shadow:0 40px 80px #000a}
+.contact>div{padding:clamp(34px,5vw,64px)}
+.contact>div+div{border-left:1px solid var(--line)}
+.contact .h2{font-size:clamp(24px,2.8vw,34px);text-align:center;margin-bottom:22px}
+.contact .intro{text-align:center;color:var(--soft);font-size:15.5px;margin:0 auto 36px;max-width:40ch}
+.info{text-align:center}
+.info div{margin-bottom:26px}
+.info .lbl{display:block;color:#e6e6e8;margin-bottom:6px}
+.info a,.info span{color:var(--soft);text-decoration:none;font-size:15.5px;overflow-wrap:anywhere}
+.info a:hover{color:#fff}
+form{display:flex;flex-direction:column;gap:6px}
+label{font:600 10px "Josefin Sans",sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);margin-top:14px}
+input,textarea{font:300 16px Lato,sans-serif;color:var(--ink);background:transparent;border:0;border-bottom:1px solid #ffffff2a;padding:10px 0;outline:none;transition:border-color .2s}
+input:focus,textarea:focus{border-color:#fff}
+textarea{resize:vertical;min-height:110px}
+form .cta{margin-top:30px;align-self:center}
+.note{text-align:center;font-size:13px;color:var(--dim);margin:14px 0 0;min-height:20px}
+footer{margin-left:84px;padding:30px max(6vw,24px);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer span{font-size:10px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+:focus-visible{outline:1px solid #fff;outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.scroll i{animation:none}.proj{transition:none}}
+@media(max-width:900px){
+  .rail{inset:auto 0 0 0;width:auto;height:58px;flex-direction:row;padding:0 18px;border-right:0;border-top:1px solid var(--line)}
+  .rail .vert{display:none}.social{flex-direction:row;gap:4px}.mono br{display:none}
+  nav{left:0;justify-content:center;padding:10px;background:#151618e6;backdrop-filter:blur(8px);flex-wrap:wrap;gap:0}
+  nav a{padding:12px 8px;letter-spacing:.2em}
+  main,footer{margin-left:0}footer{padding-bottom:80px}
+  .about,.contact{grid-template-columns:minmax(0,1fr)}.contact>div+div{border-left:0;border-top:1px solid var(--line)}
+  .skills{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .job{grid-template-columns:minmax(0,1fr);gap:6px}
+  .certs{grid-template-columns:minmax(0,1fr)}
+  .hero .sub{margin-left:0;text-align:center}
+}
+@media(max-width:600px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stats div:nth-child(3){border-left:0}
+  .skills{grid-template-columns:minmax(0,1fr)}
+  .pub{grid-template-columns:minmax(0,1fr);gap:4px}
+  .frame.a,.frame.c{display:none}.frame.b{width:78%}
+  .facts div{flex-direction:column;gap:2px}.facts b{text-align:left}
+  .scroll{display:none}nav a{font-size:10px;padding:12px 6px}
+}
+</style>
+</head>
+<body>
+
+<aside class="rail">
+  <a class="mono" href="#home" aria-label="Back to top">M<br>I<br>H</a>
+  <span class="vert">Melbourne · Australia</span>
+  <div class="social">
+    <a href="https://www.linkedin.com/in/mohammad-imamul-hossain" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zm7 0h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg></a>
+    <a href="https://github.com/Mursalin1075" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+    <a href="mailto:immursalin2001@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zm2 2v.5l8 5 8-5V7zm16 2.85-8 5-8-5V17h16z"/></svg></a>
+  </div>
+</aside>
+
+<nav id="nav">
+  <a href="#about">About</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+</nav>
+
+<main>
+<section class="sec hero" id="home">
+  <div class="wrap">
+    <span class="lbl pre">Power electronics engineer</span>
+    <h1><small>Mohammad Imamul</small>Hossain</h1>
+    <div class="sub">PhD researcher, Deakin University<br>R&amp;D engineer, ASA Industry<br>Sessional teaching staff, Swinburne</div>
+    <div><a class="cta" href="#research">View my work</a></div>
+  </div>
+  <span class="num">.01</span>
+  <div class="scroll"><span class="vert">Scroll</span><i></i></div>
+</section>
+
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="reveal">
+        <h2 class="h2">About</h2>
+        <p>I'm an electrical and electronic engineer based in Melbourne. I graduated from Swinburne University of Technology with a Bachelor of Engineering (Honours) with Distinction, and I'm now a PhD candidate at Deakin University through the REACH Trailblazer Program.</p>
+        <p>My research is on multi-port power converters for apartment-scale solar and battery systems: compact, efficient hardware that serves AC loads and modern USB-C devices from one unit. Alongside it I build embedded and IoT products as an R&amp;D Engineer at ASA Industry and teach renewable energy at Swinburne.</p>
+        <p>Longer term, I want to help build energy infrastructure in Bangladesh, where reliable power still changes lives.</p>
+      </div>
+      <div class="facts reveal">
+        <div><span>Based in</span><b>Melbourne, Australia</b></div>
+        <div><span>Research</span><b>PhD candidate, Deakin University</b></div>
+        <div><span>Industry</span><b>R&amp;D Engineer, ASA Industry</b></div>
+        <div><span>Teaching</span><b>Sessional Teaching Staff, Swinburne</b></div>
+        <div><span>Degree</span><b>BEng (Hons), Distinction</b></div>
+        <div><span>Member</span><b>Engineers Australia · IEEE</b></div>
+      </div>
+    </div>
+    <div class="stats reveal">
+      <div><b>7</b><small class="lbl">Papers</small></div>
+      <div><b>4</b><small class="lbl">Conference talks</small></div>
+      <div><b>2024</b><small class="lbl">In industry since</small></div>
+      <div><b>12+</b><small class="lbl">Projects built</small></div>
+    </div>
+  </div>
+  <span class="num">.02</span>
+</section>
+
+<section class="sec" id="experience">
+  <div class="wrap">
+    <div class="head reveal"><h2 class="h2">Experience</h2><span class="lbl">Research · Industry · Teaching</span></div>
+    <div class="jobs" id="jobs"></div>
+  </div>
+  <span class="num">.03</span>
+</section>
+
+<section class="sec" id="research">
+  <div class="wrap">
+    <div class="show reveal" aria-hidden="true">
+      <div class="frame a"><span class="lbl">Journal · 2026</span><p>Fungal pretreatment methane recovery</p></div>
+      <div class="frame b">
+        <span class="lbl">PhD research</span>
+        <svg viewBox="0 0 300 150" fill="none" stroke="#d9d9dc" stroke-width="1.4">
+          <rect x="14" y="20" width="48" height="36"/><path d="M14 32h48M14 44h48M30 20v36M46 20v36" stroke-opacity=".4"/>
+          <rect x="16" y="98" width="44" height="28"/><path d="M60 106h4v12h-4"/>
+          <rect x="126" y="44" width="48" height="64"/>
+          <path d="M140 58c-7 4 0 8 0 8s-7 4 0 8-7 4 0 8 0 8 0 8M160 58c7 4 0 8 0 8s7 4 0 8 7 4 0 8 0 8 0 8" stroke-opacity=".8"/>
+          <path d="M62 38h30v24h34M60 112h32v-22h34M174 62h34v-24h30M174 90h34v22h30"/>
+          <rect x="238" y="22" width="48" height="32"/><path d="M244 38c6-14 10-14 16 0s10 14 16 0" />
+          <rect x="238" y="98" width="48" height="28"/><rect x="250" y="107" width="24" height="10" rx="5"/>
+        </svg>
+        <p>Multi-port converters for PV–battery systems</p>
+      </div>
+      <div class="frame c"><span class="lbl">Conference · 2025</span><p>Battery stress-informed EV charging</p></div>
+      <div class="big disp">Research</div>
+    </div>
+    <div class="head reveal" style="margin-bottom:40px"><p>Power conversion, renewable energy and machine learning for energy systems.</p></div>
+    <div class="pubs" id="pubs"></div>
+    <div class="talks" id="talks"></div>
+  </div>
+  <span class="num">.04</span>
+</section>
+
+<section class="sec" id="projects">
+  <div class="wrap">
+    <div class="head reveal"><h2 class="h2">Projects</h2><span class="lbl">Built hands-on</span></div>
+    <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+  <span class="num">.05</span>
+</section>
+
+<section class="sec" id="skills">
+  <div class="wrap">
+    <div class="head reveal"><h2 class="h2">Skills</h2><span class="lbl">Tools and training</span></div>
+    <div class="skills reveal" id="skillgrid"></div>
+    <div class="certs reveal">
+      <span class="lbl">Certifications</span>
+      <ul>
+        <li>UEERE0051 Electrical principles for renewable energy design · GSES</li>
+        <li>PSS®E Module 1 Power System Simulation · Siemens and Swinburne</li>
+        <li>Industrial PLC Programming · Beckhoff Automation Australia</li>
+        <li>Machine Learning · Stanford University, Coursera</li>
+        <li>Python for Data Science and Machine Learning · Udemy</li>
+        <li>LabVIEW, IP Addressing, SolidWorks 2024 · LinkedIn Learning</li>
+      </ul>
+    </div>
+  </div>
+  <span class="num">.06</span>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="contact reveal">
+      <div class="info">
+        <h2 class="h2">Contact</h2>
+        <p class="intro">Open to research collaboration, industry projects and conversations about power electronics and renewable energy.</p>
+        <div><span class="lbl">Location</span><span>Melbourne, Victoria, Australia</span></div>
+        <div><span class="lbl">E-mail</span><a href="mailto:immursalin2001@gmail.com">immursalin2001@gmail.com</a></div>
+        <div><span class="lbl">LinkedIn</span><a href="https://www.linkedin.com/in/mohammad-imamul-hossain" target="_blank" rel="noopener">mohammad-imamul-hossain</a></div>
+        <div><span class="lbl">GitHub</span><a href="https://github.com/Mursalin1075" target="_blank" rel="noopener">Mursalin1075</a></div>
+      </div>
+      <div>
+        <h2 class="h2">Contact form</h2>
+        <form id="form" novalidate>
+          <label for="f-name">Your name</label><input id="f-name" required autocomplete="name">
+          <label for="f-mail">Your e-mail</label><input id="f-mail" type="email" required autocomplete="email">
+          <label for="f-sub">Subject</label><input id="f-sub">
+          <label for="f-msg">Message</label><textarea id="f-msg" required></textarea>
+          <button class="cta" type="submit">Send message</button>
+          <p class="note" id="note" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <span class="num">.07</span>
+</section>
+</main>
+
+<footer><span class="lbl">© <span id="yr">2026</span> Mohammad Imamul Hossain</span><span class="lbl">Melbourne · Australia</span></footer>
+
+<script>
+{
+const jobs=[
+ ["R&D Engineer","ASA Industry, Melbourne","02/2024 — Now",["Designed the AFD1/AFD2 fall detection system for aged care facilities on ESP32 hardware with three-stage progressive alerts","Built MQTT and Twilio alerting, a Python desktop app and a web monitoring dashboard","Supported the product's path to market with technical material and client meetings"]],
+ ["Sessional Teaching Staff","Swinburne University of Technology","03/2026 — Now",["Tutorials, workshops and solar and wind laboratory sessions in postgraduate Renewable Energy","Teaching in the undergraduate Engineering Technology Sustainability Project"]],
+ ["PhD Researcher","Deakin University · REACH Trailblazer Program","02/2026 — Now",["Research on multi-port power converters for apartment-scale solar PV and battery systems","Model-based evaluation of converter architectures in MATLAB/Simulink and Python"]],
+ ["Teaching Assistant","Swinburne University of Technology","03/2025 — 11/2025",["Supported the third-year Engineering Technology Sustainability Project and its weekly workshops"]],
+ ["Summer Research Scholar","Swinburne University of Technology","12/2024 — 02/2025",["Sole 2024 Summer Research Scholar from Electrical and Electronic Engineering","Semi-autonomous wheelchair control from wearable IMU and EMG sensors"]],
+ ["Research Assistant","Swinburne University of Technology","06/2024 — 11/2024",["Prototyped and tested a PEM fuel cell system integrated with an electrolyser"]],
+ ["Vice President","Swinburne Embedded Systems Club","03/2024 — 11/2025",["Led Swinburne's first Line Following Robot Competition and Year 12 STEM outreach"]]
+];
+const pubs=[
+ ["2026","Under review","Multi-Port Converters for Apartment-Scale PV–Battery Systems with AC and USB-C Interfaces: A Review and Model-Based Assessment","M. I. Hossain et al. · IEEE Access",""],
+ ["2026","Conference","Comparative Evaluation of Machine-Learning Models for Carbon-Aware Energy Optimisation in Commercial Buildings","M. I. Hossain, A. Ektesabi, A. Maiti, S. A. Gorji, M. Ektesabi · DBI 2026, Melbourne",""],
+ ["2026","Conference","Apartment-Scale Comparison of Single-Stage and Multi-Stage PV–Battery Inverter Architectures Using Digital Twins","M. I. Hossain et al. · IEEE ICEI 2026, Melbourne",""],
+ ["2026","Journal","Fungal Pretreatment-Assisted Methane Recovery from Food Waste: A Literature-Informed Simulation Framework","P. Zaferanloo, M. I. Hossain, S. Maehara, M. Ektesabi, F. Malherbe, B. Zaferanloo · Molecules 31(20), 3594","https://doi.org/10.3390/molecules31203594"],
+ ["2025","Conference","Optimizing EV Charging through Battery Stress–Informed Machine Learning and a User-Facing App","M. I. Hossain, K. D. Abeyrathna, M. M. Ektesabi · IEEE ICEI 2025","https://doi.org/10.1109/ICEI68356.2025.11603728"],
+ ["2025","Conference","A Double U-Joint Steering System for a FSAE Vehicle: Design & Analysis","M. Mohammad, A. Rahman, M. I. Hossain et al. · IEEE ICEI 2025","https://doi.org/10.1109/ICEI68356.2025.11603731"],
+ ["2025","Conference","Dynamic Simulation and Comparative Assessment of PEM and Alkaline Fuel Cells for EV Applications","M. I. Hossain, M. M. Ektesabi · IEEE PES AUPEC 2025, Brisbane","https://doi.org/10.1109/AUPEC66173.2025.11219465"],
+ ["2025","Conference","Smart EV Charging Spot Finder","M. I. Hossain et al. · CIGRE Australia Conference 2025, Adelaide",""]
+];
+const talks=[["DBI 2026","Melbourne Convention and Exhibition Centre · Nov 2026"],["IEEE ICEI 2026","Swinburne University, Melbourne · Nov 2026"],["IEEE ICEI 2025","Swinburne University, Melbourne · Nov 2025"],["CIGRE Australia","Adelaide · Sep 2025"]];
+const projects=[
+ ["Semi-Autonomous Smart Hybrid EV","Final year project: an electric vehicle powered by hydrogen fuel cells and batteries with semi-autonomous driving features.","Energy","Fuel cells · Simulink · Embedded"],
+ ["Smart EV Charging Spot Finder","IoT charging detection with CT and IR sensors on ESP32, automated billing and Google Maps navigation. Built with Siemens.","IoT","ESP32 · Sensors · Maps API"],
+ ["Fall Detection System","Aged care fall detection with progressive alerts, Twilio notifications, a desktop app and a web dashboard.","Embedded","ESP32 · MQTT · Python"],
+ ["Community Hydrogen Simulation","A 50-house community producing hydrogen and electricity locally, with ML-based demand modelling.","Energy","Simulink · Python · ML"],
+ ["Fuel Cell Performance App","Interactive modelling of PEM and alkaline fuel cell losses, efficiency and hydrogen use.","Software","Vue.js · JavaScript"],
+ ["Smart Energy Meter","Arduino and CT-sensor metering streamed to the cloud with automatic billing through a web app.","IoT","Arduino · MQTT · Web"],
+ ["3-Axis Vibration Test Bench","Industry test bench with Haemograph recreating in-transit ambulance motion for medical device testing.","Embedded","Mechatronics · Testing"],
+ ["Remote Embedded Systems Lab","An online platform letting students program and test microcontrollers without physical hardware.","Software","Embedded · Web"],
+ ["Semi-Autonomous Wheelchair","Hands-free wheelchair control from IMU, EMG and obstacle sensors with a Raspberry Pi interface.","Embedded","Raspberry Pi · IMU · EMG"],
+ ["Voltage Control Display Module","Voltage monitoring for rotary converters with a Nextion GUI and relay-based inverter control.","Embedded","Nextion · Power"],
+ ["LoRaWAN Environmental Logger","Long-range, low-power environmental and soil monitoring on The Things Network with custom dashboards.","IoT","LoRaWAN · TTN · BME280"],
+ ["5G Network Visualiser","A Streamlit app mapping and classifying 5G performance from geospatial data.","Software","Python · Streamlit"]
+];
+const skills=[
+ ["Power and simulation","MATLAB/Simulink, PSIM, PSS®E, PowerWorld, LabVIEW, TwinCAT"],
+ ["Programming","Python, C, C++, JavaScript, Ruby, R, PLC"],
+ ["Embedded and IoT","ESP32, Arduino, Raspberry Pi, ATtiny85, MQTT, LoRaWAN"],
+ ["Hardware and CAD","Altium, EasyEDA, SolidWorks, Fusion 360, AutoCAD, soldering"],
+ ["Data and AI","TensorFlow, PyTorch, Jupyter, Streamlit"],
+ ["Standards","AS/NZS 3000, AS/NZS 5033, AS/NZS 4777.2, AS/NZS 5139"]
+];
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const $=id=>document.getElementById(id);
+$("jobs").innerHTML=jobs.map(([t,o,w,b])=>`<div class="job reveal"><div class="when">${w}</div><div><h3>${esc(t)}</h3><div class="org">${esc(o)}</div><ul>${b.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div></div>`).join("");
+$("pubs").innerHTML=pubs.map(([y,k,t,a,u])=>`<article class="pub reveal"><div class="yr">${y}</div><div><span class="lbl kind">${k}</span><h3>${esc(t)}</h3><p>${esc(a)}</p></div>${u?`<a href="${u}" target="_blank" rel="noopener">Read</a>`:"<span></span>"}</article>`).join("");
+$("talks").innerHTML=talks.map(([t,p])=>`<div class="talk"><span class="lbl">Presented</span><h3 style="margin-top:8px">${t}</h3><p>${p}</p></div>`).join("");
+$("skillgrid").innerHTML=skills.map(([t,l])=>`<div class="sk"><h3>${t}</h3><p>${esc(l)}</p></div>`).join("");
+const cats=["All","Energy","Embedded","IoT","Software"],fEl=$("filters"),gEl=$("grid");
+const draw=c=>{let i=0;gEl.innerHTML=projects.filter(p=>c==="All"||p[2]===c).map(([t,d,,tg])=>`<article class="proj"><span class="n">.${String(++i).padStart(2,"0")}</span><h3>${esc(t)}</h3><p>${esc(d)}</p><div class="tags">${esc(tg)}</div></article>`).join("");
+  fEl.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.c===c));};
+fEl.innerHTML=cats.map(c=>`<button data-c="${c}" aria-pressed="false">${c}</button>`).join("");
+fEl.addEventListener("click",e=>{const b=e.target.closest("button");if(b)draw(b.dataset.c);});
+draw("All");
+$("yr").textContent=new Date().getFullYear();
+$("form").addEventListener("submit",e=>{
+  e.preventDefault();
+  const n=$("f-name").value.trim(),m=$("f-mail").value.trim(),s=$("f-sub").value.trim(),t=$("f-msg").value.trim(),note=$("note");
+  if(!n||!m||!t||!/^\S+@\S+\.\S+$/.test(m)){note.textContent="Please add your name, a valid e-mail and a message.";return;}
+  const body=`${t}\n\n${n}\n${m}`;
+  location.href=`mailto:immursalin2001@gmail.com?subject=${encodeURIComponent(s||"Portfolio enquiry from "+n)}&body=${encodeURIComponent(body)}`;
+  note.textContent="Opening your e-mail app. If nothing happens, write to immursalin2001@gmail.com.";
+});
+const els=document.querySelectorAll(".reveal");
+if("IntersectionObserver" in window){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target);}}),{threshold:.1});els.forEach(e=>io.observe(e));}else els.forEach(e=>e.classList.add("in"));
+const links=[...document.querySelectorAll("#nav a")];
+const so=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+x.target.id));}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("section[id]").forEach(s=>so.observe(s));
+}
+</script>
+</body>
+</html>
